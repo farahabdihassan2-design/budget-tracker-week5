@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SpendWise Dashboard Shell</title>
+  <!-- Google Fonts for Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Main Dashboard Container using CSS Grid -->
+  <div class="dashboard-container">
+
+    <!-- 1. Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="brand-logo">
+        <h2>SpendWise</h2>
+      </div>
+      <nav class="sidebar-nav">
+        <ul>
+          <li><a href="#" class="active">Dashboard</a></li>
+          <li><a href="#">Expenses</a></li>
+          <li><a href="#">Categories</a></li>
+          <li><a href="#">Budgets</a></li>
+          <li><a href="#">Reports</a></li>
+          <li><a href="#">Settings</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+
+      <!-- 2. Header Area -->
+      <header class="header">
+        <div class="header-title">
+          <h1>Financial Dashboard</h1>
+          <p>Track your income, expenses, and savings in one place</p>
+        </div>
+        <div class="user-profile">
+          <span class="user-name">Hassan Abdi Farah</span>
+        </div>
+      </header>
+
+      <!-- Main Dashboard Grid Content -->
+      <main class="dashboard-main">
+
+        <!-- 3. Six Category Cards displaying realistic financial data -->
+        <section class="cards-section">
+          <h2>Expense Categories</h2>
+          <div class="cards-grid">
+
+            <article class="card">
+              <div class="card-icon">🍔</div>
+              <div class="card-info">
+                <h3>Food & Dining</h3>
+                <p class="card-amount">$450.00</p>
+                <span class="card-status status-normal">Monthly Budget: $600</span>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-icon">🚗</div>
+              <div class="card-info">
+                <h3>Transportation</h3>
+                <p class="card-amount">$180.00</p>
+                <span class="card-status status-normal">Monthly Budget: $250</span>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-icon">🏠</div>
+              <div class="card-info">
+                <h3>Housing & Rent</h3>
+                <p class="card-amount">$1,200.00</p>
+                <span class="card-status status-fixed">Fixed Cost</span>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-icon">🎬</div>
+              <div class="card-info">
+                <h3>Entertainment</h3>
+                <p class="card-amount">$120.00</p>
+                <span class="card-status status-normal">Monthly Budget: $200</span>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-icon">💡</div>
+              <div class="card-info">
+                <h3>Utilities</h3>
+                <p class="card-amount">$210.00</p>
+                <span class="card-status status-normal">Monthly Budget: $300</span>
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-icon">💰</div>
+              <div class="card-info">
+                <h3>Savings & Investments</h3>
+                <p class="card-amount">$850.00</p>
+                <span class="card-status status-good">Target Achieved</span>
+              </div>
+            </article>
+
+          </div>
+        </section>
+
+        <!-- Existing Expense Table Section -->
+        <section class="recent-expenses-section">
+          <h2>Recent Expenses</h2>
+          <table class="expenses-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Amount</th>
+                <th>Category</th>
+                <th>Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Groceries</td>
+                <td>$85.50</td>
+                <td>Food</td>
+                <td>2026-10-01</td>
+              </tr>
+              <tr>
+                <td>Internet Bill</td>
+                <td>$60.00</td>
+                <td>Utilities</td>
+                <td>2026-10-02</td>
+              </tr>
+              <tr>
+                <td>Bus Pass</td>
+                <td>$25.00</td>
+                <td>Transportation</td>
+                <td>2026-10-02</td>
+              </tr>
+              <tr>
+                <td>Coffee & Snacks</td>
+                <td>$12.75</td>
+                <td>Food</td>
+                <td>2026-10-03</td>
+              </tr>
+              <tr>
+                <td>Course Textbook</td>
+                <td>$45.00</td>
+                <td>Education</td>
+                <td>2026-10-04</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- Video & Educational Content -->
+        <section class="video-section">
+          <h2>Budgeting Tips</h2>
+          <div class="video-wrapper">
+            <iframe 
+              src="https://www.youtube.com/embed/sVKQn2I4HDM" 
+              title="Budgeting Video Tutorial" 
+              allowfullscreen>
+            </iframe>
+          </div>
+        </section>
+
+      </main>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <p>&copy; 2026 Hassan Abdi Farah. All Rights Reserved.</p>
+      </footer>
+
+    </div>
+  </div>
+
+</body>
+</html>
