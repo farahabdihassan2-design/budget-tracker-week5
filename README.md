@@ -1,77 +1,31 @@
-# SpendWise — Personal Budget Tracker
+# SpendWise - Interactive Budget Tracker (Week 6)
 
-A responsive, interactive financial tracking application 
-developed as part of the Power Learn Project (PLP) 
-Software Engineering training program under the 
-PLP*ILO initiative.
+## Overview
+SpendWise is an interactive budgeting and financial tracking web application built with HTML, CSS, and JavaScript. For the Week 6 assignment, the application was upgraded from static templates to a fully dynamic, event-driven web application featuring real-time data handling, decision-making, and DOM updates.
 
----
+## Key Improvements Made This Week
+* **Dynamic Control Panel:** Added interactive input forms enabling users to set monthly budgets and record new expenses with categories and descriptions.
+* **Data Model & Arrays:** Replaced hardcoded static items with a dynamic JavaScript array of objects (`expenses`) to manage multiple records efficiently.
+* **Automated Calculations:** Implemented loop-based processing to calculate total expenditures dynamically.
+* **Interactive UI & Feedback:** Added event listeners and conditional logic to evaluate financial health and update summary cards and alert banners in real time.
 
-## Project Overview
+## Technical Implementation Highlights
 
-The SpendWise Budget Tracker transforms static financial 
-monitoring into a dynamic client-side application. 
-The project enables users to track monthly spending, 
-evaluate category-specific expenditures, process real-time 
-expense inputs, and automatically recalculate available 
-balances using JavaScript logic.
+### 1. Conditionals (Decision Making)
+Conditional statements (`if`, `else if`, `else`) are used inside `updateDashboard()` to evaluate the user's remaining balance against their budget. The application triggers visual warnings if the budget is exceeded or running low.
 
----
+### 2. Arrays for Data Storage
+An array (`let expenses = []`) stores multiple expense objects. Each object contains unique properties (`id`, `description`, `amount`, `category`, and `date`).
 
-## JavaScript Concepts Implemented
+### 3. Loops for Data Processing
+JavaScript `forEach` loops iterate over the `expenses` array to calculate total spending and dynamically generate table rows for the user interface.
 
-### 1. Variables & Data Types
-- **Variables (`const` & `let`):** Used `const` for 
-  fixed configurations (such as monthly budget limits) 
-  and `let` for values that change (such as total 
-  expenses and remaining balance).
-- **Data Structures:** Utilized primitives (`Numbers`, 
-  `Strings`, `Booleans`) alongside complex structures 
-  (`Objects` and `Arrays`) to model expense categories.
+### 4. DOM Manipulation
+Native DOM methods (`document.getElementById`, `.textContent`, `.innerHTML`) are used to read user input values, update financial summary display cards, and render dynamic tables directly on the webpage without relying on the console.
 
-### 2. User Input Handling
-- **Prompt Collection:** Used `prompt()` to capture 
-  real-time expense inputs from the user.
-- **Type Conversion:** Used `parseFloat()` to convert 
-  string inputs into calculable numbers.
+### 5. Event Handling
+`addEventListener` is attached to buttons (`Set Budget`, `Add Expense`) to capture user actions (`click` events) and trigger reactive JavaScript functions instantly.
 
-### 3. Arithmetic & Budget Calculations
-- Automated key operations:
-  - Expense Accumulation:
-    `updatedTotalExpenses = totalExpenses + parsedExpense`
-  - Balance Evaluation:
-    `updatedRemainingBalance = monthlyBudget - updatedTotalExpenses`
-
-### 4. Modular & Reusable Functions
-- **Function Encapsulation:** Implemented 
-  `calculateBudgetStatus(budget, totalSpent)` to 
-  centralize logic.
-- **Conditional Logic:** Evaluates balance states using 
-  `if...else` statements to return clear status alerts.
-
----
-
-## File Structure & Architecture
-
-- `index.html` — Semantic HTML5 layout and script element link
-- `style.css` — CSS Grid & Flexbox styling rules
-- `script.js` — JavaScript logic, calculations, and functions
-- `README.md` — Comprehensive project documentation
-
----
-
-## How to Test the Application
-
-1. Clone or download the repository.
-2. Open `index.html` in any modern web browser.
-3. When prompted, enter a numerical expense amount.
-4. Open the Developer Console (**F12** -> **Console** tab) 
-   to inspect calculated totals and function outputs.
-
----
-
-## Author & Acknowledgments
-
-- **Developer:** Hassan Abdi Farah
-- **Program:** PLP*ILO Software Engineering Training Program
-- **Cohort:** Garissa Hub / PLP-ILO-2601-1320
+## Challenges Encountered & Resolutions
+* **Challenge:** Ensuring input validation handled empty or negative numbers properly without breaking calculations.
+* **Resolution:** Implemented explicit validation checks (`isNaN`, `value <= 0`) using `alert()` dialogs to guide the user toward valid entries before updating the data model.
